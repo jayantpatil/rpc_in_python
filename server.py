@@ -10,7 +10,6 @@ def server():
     print "RPC Server Listening"
     while 1:
         (clientsocket,address) = serversocket.accept()
-        
         data=clientsocket.recv(1024)
         inp=data.split(",")
         if inp[0] in hosted_services:
